@@ -9,10 +9,13 @@ function checkGame(deadMole, lostMole) {
     console.log(deadMole, lostMole);
     if (deadMole === 10) {
         alert("Вы победили!");
-        location.reload();
+        wings = 0;
+        losts = 0;
+        
     } else if (lostMole === 5) {
-        alert("Вы приграли!");
-        location.reload();
+        alert("Вы проиграли!");
+        wings = 0;
+        losts = 0;
     };
 };
 
@@ -21,6 +24,7 @@ for (let i = 1; i <= 9; i++) {
         if (this.className.includes('hole_has-mole')) {
             wings += 1;
             deadMole.textContent = wings;
+
         } else {
             losts += 1;
             lostMole.textContent = losts;

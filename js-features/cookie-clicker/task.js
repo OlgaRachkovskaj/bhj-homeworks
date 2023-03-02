@@ -1,3 +1,4 @@
+
 let cookieID = document.getElementById ('cookie');//позволяет получить контент 
 
 let clicker__counterID = document.getElementById('clicker__counter'); 
@@ -9,9 +10,5 @@ cookieID.addEventListener('click', function(){
     counter++;//обновление счетчика  
     clicker__counterID.textContent = counter; //меняем контент тега 
  
-    if (counter % 2 == 0) { 
-      cookieID.width = '250'; 
-    }  
-    if (counter % 2 !== 0)  
-      cookieID.width = '202'; 
+    cookieID.width = counter % 2 == 0 ? 250 : 202;
 });
